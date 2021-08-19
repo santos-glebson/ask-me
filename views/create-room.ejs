@@ -1,0 +1,18 @@
+<%-include ("partials/header-login")%>
+  <main>
+    <div class="left-container"></div>
+    <div class="info-container">
+      <form class="info" action="/create-room" method="POST">
+        <h2>Crie sua própria sala</h2>
+        <%-include ("partials/error-messages")%>
+          <input type="password" placeholder="Insira uma senha" name="password" id="inputCreateRoom">
+          <button class="blue-button" type="submit" id="buttonCreateRoom"><i class="fas fa-sign-in-alt"></i> Criar sala</button>
+          <a class="white-button back" onclick="window.history.back()"><i class="fas fa-undo-alt"></i> Voltar</a>
+      </form>
+  </main>
+  </div>
+
+  <script src="/scripts/create-room-script.js"></script>
+  </body>
+
+  </html>

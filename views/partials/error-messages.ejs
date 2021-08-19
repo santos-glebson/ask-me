@@ -1,0 +1,9 @@
+<% if (error) { %>
+  <ul class="error-messages">
+    <% for( let err of error ) { %>
+      <li>
+        <%=err.msg%>
+      </li>
+      <% } %>
+  </ul>
+  <% } %>

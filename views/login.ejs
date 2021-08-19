@@ -1,0 +1,25 @@
+<%-include ("partials/header-login")%>
+  <main>
+    <div class="left-container"></div>
+    <div class="info-container">
+      <div class="info">
+        <h2>Entre como participante</h2>
+        <%-include ("partials/error-messages")%>
+          <form action="/login" method="POST">
+            <input type="number" placeholder="Código da sala" name="roomCode" id="inputRoomCode">
+            <button class="blue-button" id="buttonEnterRoom"><i class="fas fa-sign-in-alt"></i> Entrar na sala</button>
+          </form>
+          <div class="separator">
+            <span></span>
+            <span>ou</span>
+            <span></span>
+          </div>
+          <h2>Crie sua própria sala, de forma fácil</h2>
+          <a href="/create-room" class="white-button"><i class="fas fa-plus-circle"></i> Criar sala</a>
+      </div>
+    </div>
+  </main>
+  </div>
+  </body>
+
+  </html>

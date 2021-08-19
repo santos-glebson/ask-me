@@ -1,0 +1,233 @@
+h2 {
+  margin-top: 6.4rem;
+}
+
+form {
+  border: 1px solid var(--color2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+header input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: auto;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.room-code-div {
+  border: 2px solid var(--color2);
+  padding: 0.7rem;
+  width: 10.5rem;
+  color: var(--color2);
+  border-radius: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  display: flex;
+}
+
+.room-code-div input {
+  background: none;
+  width: 75%;
+  color: var(--color2);
+  cursor: pointer;
+  position: static;
+}
+
+.room-code-div i {
+  margin-left: 0.5rem;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-code-div input::selection {
+  background: none;
+}
+
+.copy-button {
+  width: 100%;
+  color: var(--color8);
+  border: 2px solid var(--color8);
+  padding: 1rem;
+  background-color: var(--color5);
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: -5rem;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+form p {
+  font-size: 1.2rem;
+  color: var(--color4);
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-container {
+  background-color: var(--color4);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 10rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.question-read {
+  background-color: var(--color7);
+}
+
+.question-actions {
+  align-self: flex-end;
+}
+
+.question-container p {
+  display: flex;
+  align-items: center;
+}
+
+.question-container p i {
+  color: var(--color2);
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+.question-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.question-container button:first-child {
+  color: var(--color2);
+}
+
+.question-container button:first-child.action-read {
+  color: var(--color9);
+}
+
+.question-container button:last-child {
+  margin-left: 2rem;
+  color: var(--color6);
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+  }
+
+  header > a {
+    margin-bottom: 4rem;
+  }
+
+  header .header-buttons button,
+  header .header-buttons a {
+    margin: 0 0.5rem;
+  }
+}
+
+/* Modal */
+
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.719);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.painel {
+  background-color: var(--color5);
+  padding: 6.4rem 8.6rem;
+  text-align: center;
+  border-radius: 2rem;
+  position: fixed;
+}
+
+#modalForm {
+  border: none;
+}
+
+.modal .actions-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.modal .actions-buttons button:first-child {
+  margin-right: 2rem;
+}
+
+.painel h2 {
+  margin-top: 0;
+}
+
+.painel p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.painel button:first-child {
+  background-color: var(--color7);
+  color: var(--color6);
+}
+
+.painel button:last-child {
+  background-color: var(--color6);
+}
+
+.filter form {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.filter input#read,
+.filter input#notRead {
+  margin: 0;
+  background-color: red;
+}
+
+.error-messages {
+  color: var(--color6);
+  position: absolute;
+  top: 2rem;
+  border: 2px solid var(--color6);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  align-self: center;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.error-messages li {
+  list-style: none;
+}

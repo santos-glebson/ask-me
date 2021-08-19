@@ -1,0 +1,55 @@
+<%-include ("partials/header-rooms")%>
+  <main>
+    <%-include ("partials/error-messages")%>
+      <h2>Faça sua pergunta</h2>
+      <form action="/create-question" method="POST">
+        <textarea name="question" placeholder="O que você quer perguntar?"></textarea>
+        <input type="hidden" name="roomCode" value="<%=roomCode%>">
+        <div>
+          <p><i class="fas fa-lock"></i> Esta pergunta é anônima</p>
+          <button type="submit" class="blue-button">Enviar</button>
+        </div>
+      </form>
+      <%for(let q=questions.length - 1; q>= 0; q--) { %>
+        <%if(questions[q].read==false) {%>
+
+          <div class="question-container">
+            <%}else {%>
+              <div class="question-container question-read">
+                <%}%>
+                  <p><i class="fas fa-user-circle"></i>
+                    <%=questions[q].question%>
+                  </p>
+                  <div class="question-actions">
+                    <%if(questions[q].read==false) {%>
+                      <button id="check" data-id="<%= questions[q]._id%>"><i class="fas fa-check"></i>Marcar como lida</button>
+                      <%} else {%>
+                        <button class="action-read" id="check" data-id="<%= questions[q]._id%>"><i class="fas fa-check"></i>Questão lida</button>
+                        <%}%>
+                          <button href="#" class="action-delete" id="delete" type="submit" data-id="<%= questions[q]._id%>"><i class=" fas fa-trash"></i> Excluir</button>
+                  </div>
+              </div>
+              <%}%>
+  </main>
+  </div>
+
+  <!-- Modal -->
+
+  <section class="modal">
+    <div class="painel">
+      <h2 class="modalTitle">Excluir pergunta</h2>
+      <p class="modalQuestion">Tem certeza que você deseja excluir esta pergunta?</p>
+      <form method="POST" id="modalForm">
+        <input type="password" placeholder="Digite a senha" name="password" id="confirmPassword">
+        <div class="actions-buttons">
+          <button class="blue-button" id="cancelAction">Cancelar</button>
+          <button class="blue-button modalConfirm">Sim, excluir</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="/scripts/room-script.js"></script>
+  </body>
+
+  </html>

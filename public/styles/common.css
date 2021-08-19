@@ -1,0 +1,100 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+input,
+button {
+  outline: none;
+}
+
+/* Global Settings */
+
+:root {
+  --color1: #05004a;
+  --color2: #3399cc;
+  --color3: #fed32c;
+  --color4: #d5d5df;
+  --color5: #ffffff;
+  --color6: rgb(185, 73, 73);
+  --color7: rgb(215, 224, 215);
+  --color8: #5eba7d;
+  --color9: rgb(81, 133, 98);
+}
+
+html {
+  font-size: 65.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--color1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header img {
+  max-width: 16.7rem;
+}
+
+.container {
+  padding: 3.2rem 16rem;
+  font-size: 1.6rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2.4rem;
+}
+
+input {
+  border-radius: 1rem;
+  border: 0.2rem solid var(--color2);
+  margin-bottom: 1.8rem;
+  padding: 1rem;
+  outline: none;
+  font-size: 1.5rem;
+}
+
+.blue-button,
+.white-button {
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.blue-button {
+  border: none;
+  background-color: var(--color2);
+  color: var(--color5);
+}
+
+.white-button {
+  color: var(--color2);
+  background-color: var(--color5);
+  border: 2px solid var(--color2);
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding: 2.5rem;
+  }
+}
